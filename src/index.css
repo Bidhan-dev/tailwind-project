@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@theme {
+
+  --font-poppins: "Poppins", sans-serif; 
+  --color-primary: #3238F2; 
+}
+ 
+.anchor-hover { 
+  border-bottom: 1px;
+  border-style: dotted;
+  border-color: #a6a6a6;
+}
+.anchor-hover:hover{
+  border-style: solid;
+  border-color: #909090;
+}
+@layer base {
+  .container{
+    @apply px-6 py-5 max-w-7xl mt-16 mx-auto lg:px-8  lg:mt-14;
+  }
+}
+
+@layer utilities { 
+
+  /* Outer Card */
+  .gradient-card {
+    @apply rounded-2xl p-0.5 bg-slate-200;
+  }
+
+  .gradient-card:hover {
+    @apply bg-linear-to-br from-red-200 via-purple-200 to-yellow-200;
+  }
+
+  /* Inner Card */
+  .gradient-card-inner {
+    @apply rounded-2xl bg-white w-full h-full p-6 flex flex-col   gap-6;
+  }
+
+  .group:hover .gradient-card-inner {
+    @apply bg-linear-to-br from-red-50 via-purple-50 to-yellow-50;
+  }
+
+}
+
